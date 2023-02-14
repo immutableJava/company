@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Getter
 @Setter
 @Entity(name = "employees")
@@ -24,4 +27,7 @@ public class Employee {
     @Column(name = "position_id")
     private Long positionId;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee_id")
+    private Set<Activity> activities = new HashSet<>();
 }

@@ -1,7 +1,6 @@
 package com.java.company.controller;
 
 import com.java.company.model.Employee;
-import com.java.company.repository.EmployeeRepository;
 import com.java.company.service.EmployeeService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
